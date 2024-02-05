@@ -1,3 +1,229 @@
 body {
+  background-color: #343541;
+}
+
+header {
+  background-color: firebrick;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 4px;
+  border-radius: 25px;
+  border: black solid;
+  color: black;
+  transition: color 3s ease;
+}
+
+header:hover {
+  color: whitesmoke;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#logoContenedor {
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  background-color: black;
+  margin: 2px;
+}
+
+#logo {
+  width: 40px;
+  border-radius: 40px;
+  margin: 4px;
+}
+
+nav {
+  background-color: firebrick;
+  display: flex;
+  border-radius: 25px;
+  border: black solid 2px;
+
+  div {
+    margin: 4px;
+    display: flex;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+    li {
+      background-color: whitesmoke;
+      margin: 2px;
+      display: inline-flex;
+      cursor: pointer;
+      align-items: center;
+      padding: 2px;
+      border: black solid 2px;
+      border-radius: 25px;
+    }
+  }
+}
+
+main {
+  background-color: firebrick;
+  margin: 8px;
+  display: flexbox;
+  border: black solid 2px;
+
+  #items {
+    /* display: flexbox; */
+    flex-direction: column;
+    /* background-color: blue; */
+    margin: 8px;
+    ul {
+      margin: 8px;
+      /* background-color: aqua; */
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      li {
+        margin: 8px;
+        background-color: whitesmoke;
+        padding: 4px;
+        border-radius: 25px;
+        border: black solid 2px;
+      }
+    }
+  }
+
+  .tarjetas {
+    margin: 4px;
     background-color: whitesmoke;
+    border: black solid 2px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* align-content: center; */
+    justify-content: center;
+    align-items: center;
+
+    .title {
+      margin: 8px;
+      background-color: whitesmoke;
+      padding: 4px;
+      border-radius: 25px;
+      border: firebrick solid 2px;
+    }
+  }
+}
+
+#contenedorDeTarjetas {
+  display: flex;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 10px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  /* display: flex; */
+  /* flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; */
+  /* flex-direction: row; */
+
+  #envioFilm img {
+    height: 100px;
+  }
+}
+
+/*!ACÁ COPIÉ LO DEL TRABAJO ANTERIOR */
+#envioFilm {
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  /* align-content: center; */
+}
+
+#envioFilm:hover div:hover {
+  opacity: 1;
+  transition: 2s;
+  cursor: pointer;
+}
+
+#envioFilm div {
+  opacity: 0.5;
+  padding: 8px;
+  background-color: #343541;
+  width: 240px;
+  margin: 8px;
+  border-radius: 25px;
+  border: whitesmoke solid;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+
+#envioFilm * h4 {
+  margin: 8px;
+  width: -webkit-fill-available;
+  border: #d1d5d8 solid 3px;
+  border-radius: 25px;
+}
+
+#envioFilm img {
+  width: 200px;
+  padding: 8px;
+  object-fit: cover;
+  align-items: center;
+  justify-content: center;
+  border: #d1d5d8 solid 2px;
+  border-radius: 25px;
+}
+
+#envioFilm div p {
+  justify-content: center;
+  align-items: center;
+  margin: 8px;
+  padding: inherit;
+}
+
+/*!HASTA ACÁ. HAY QUE ACOMODAR*/
+
+#divCreador {
+  margin: 8px;
+  background-color: firebrick;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 25px;
+  border: whitesmoke solid 2px;
+  margin: 12px;
+}
+
+#divCreador * {
+  margin: 4px;
+  border-radius: 2px;
+}
+
+footer {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 1rem;
+}
+
+footer li {
+  display: inline;
+  margin: 0 12px;
+}
+
+footer a {
+  color: whitesmoke;
+  text-decoration: none;
 }
