@@ -129,155 +129,74 @@ main {
       align-items: center;
     }
 
+    .description {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+  }
+
     #parrafo{
       margin: 40px;
     }
+
+    img{
+      margin: 25px;
+      border-radius: 25px;
+      border: black solid 2px;
+      height: 250px;
+    }
   
 
-    .form{
-      padding: 12px;
-      margin: 8px;
-      background-color: firebrick;
-      border-radius: 25px;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      align-content: center;
-      justify-content: center;
-      align-items: stretch;
-      input{
-        margin: 4px;
-        padding: 4px;
-        border-radius: 8px;  
-      }
-      button{
-        display: flex;
-        text-align: center;
-        flex-direction: column;
-        align-items: center;
-        margin: 0px;
-        border-radius: 25px;
-        margin-top: 8px;
-        cursor: pointer;
-
-      }
-    }
   }
 
 }
 
-#contenedorDeTarjetas {
-  display: flex;
-  background-color: whitesmoke;
-  border-radius: 10px;
-  padding: 1rem;
-  margin-top: 10px;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  /* display: flex; */
-  /* flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start; */
-  /* flex-direction: row; */
 
-  #envioFilm img {
-    height: 100px;
-  }
-}
 
-/*!ACÁ COPIÉ LO DEL TRABAJO ANTERIOR */
-#envioFilm {
-  /* background-color: red; */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: row;
-  /* align-content: center; */
-}
-
-#envioFilm:hover div:hover {
-  opacity: 1;
-  transition: 2s;
-  cursor: pointer;
-}
-
-#envioFilm div {
-  opacity: 0.5;
-  padding: 8px;
-  background-color: #343541;
-  width: 240px;
-  margin: 8px;
-  border-radius: 25px;
-  border: whitesmoke solid;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  opacity: 0.5;
-  transition: opacity 0.5s;
-}
-
-#envioFilm * h4 {
-  margin: 8px;
-  width: -webkit-fill-available;
-  border: #d1d5d8 solid 3px;
-  border-radius: 25px;
-}
-
-#envioFilm img {
-  width: 200px;
-  padding: 8px;
-  object-fit: cover;
-  align-items: center;
-  justify-content: center;
-  border: #d1d5d8 solid 2px;
-  border-radius: 25px;
-}
-
-#envioFilm div p {
-  justify-content: center;
-  align-items: center;
-  margin: 8px;
-  padding: inherit;
-}
-
-/*!HASTA ACÁ. HAY QUE ACOMODAR*/
-
-#divCreador {
-  margin: 8px;
-  background-color: firebrick;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  border-radius: 25px;
-  border: whitesmoke solid 2px;
-  margin: 12px;
-}
-
-#divCreador * {
-  margin: 4px;
-  border-radius: 2px;
-}
 
 footer {
   margin-top: 1rem;
   text-align: center;
+  display: block;
+  h4 {
+    background-color: firebrick;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    border-radius: 25px;
+}
 }
 
 footer ul {
   list-style-type: none;
   padding: 1rem;
+ 
 }
 
 footer li {
   display: inline;
   margin: 0 12px;
+ 
 }
 
-footer a {
-  color: whitesmoke;
+footer li a {
+  color:#343541;
   text-decoration: none;
+}
+
+#volverAlMenu{
+  background-color: firebrick;
+  padding: 8px;
+  margin-bottom: 12px;
+  border-radius: 25px;
+  border: #d1d5d8 solid 2px;
+  text-align: center;
+  display: inline-flex;
+
 }

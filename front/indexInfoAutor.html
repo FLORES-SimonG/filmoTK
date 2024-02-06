@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/stylesInfoAutor.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portafolio</title>
+  </head>
+
+  <body>
+    <header id="name">
+      <h1>FLORES, Simón G.</h1>
+    </header>
+
+    <section id="profession">
+      <h2>Full Stack Developer Student</h2>
+    </section>
+
+    <main class="principal">
+      <section class="card">
+        <div class="welcome">
+          <h3>Bienvenido/a a mi Portafolio</h3>
+        </div>
+
+        <article class="personal">
+          <div class="title">
+            <h4>Información Personal</h4>
+          </div>
+          <div class="description">
+            <p>
+              Soy estudiante de Full Stack Developer de la escuela SoyHenry. Me
+              he egresado como Químico en la Universidad Tecnológica Nacional de
+              Villa María (Argentina).<br />
+              Actualmente me resta 10 exámenes finales para ser Ingeniero
+              Químico.<br />
+              Me encuentro viviendo en Alemania desde hace 3 años, donde aquí he
+              estudiado el idioma y he aprendido tanto hablar como escribir en
+              Alemán; al mismo tiempo, desde que estoy viviendo aquí, me he
+              dedicado a aprender también el Inglés. <br />
+            </p>
+          </div>
+        </article>
+
+        <article class="tecnoFav">
+          <div class="title">
+            <h4>Mis tecnologías favoritas</h4>
+          </div>
+          <div class="imagenes">
+            <img
+              src="https://www.freecodecamp.org/news/content/images/2022/10/golang.png"
+              alt="GOlang"
+            />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+              alt="JavaScript"
+            />
+            <img
+              src="https://logowik.com/content/uploads/images/731_java.jpg"
+              alt="Java"
+            />
+          </div>
+        </article>
+
+        <article class="hobbies">
+          <div class="title">
+            <h4>Hobbies</h4>
+          </div>
+          <div class="description">
+            <p>
+              Aquí puedo detallar mis actividades favoritas con una breve
+              descripción y puedo colocar una imagen de la misma. Esto se
+              reflejará en el fin de la web.
+            </p>
+            <div class="infoHobbies">
+              <form class="form">
+                <input
+                  type="text"
+                  placeholder="Nombre de la Actividad"
+                  class="nombreJS"
+                />
+                <input
+                  type="text"
+                  placeholder="Descripción"
+                  class="descripcionJS"
+                />
+                <input
+                  type="url"
+                  placeholder="URL de la imagen"
+                  class="urlJS"
+                />
+                <button class="botonJS">Adjuntar</button>
+              </form>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <aside class="secundario">
+      <section class="cardHobbies">
+        <article>
+          <div class="title">
+            <h4>Mis actividades favoritas</h4>
+            <div id="envioActividad"></div>
+          </div>
+        </article>
+      </section>
+    </aside>
+
+    <div id="divCreador">
+      <form id="formularioInputCreador">
+        <input
+          type="text"
+          placeholder="Nombre del Developer"
+          id="inputCreador"
+        />
+        <button id="botonCreador">Enviar</button>
+      </form>
+    </div>
+
+    <footer>
+      <h4>¡Gracias por visitarme!</h4>
+
+      <ul>
+        <li><a href="https://www.linkedin.com/in/simongf94/">Linkedin</a></li>
+        <li><a href="https://platzi.com/p/simonflores_10/">Platzi</a></li>
+        <li><a href="https://github.com/FLORES-SimonG">GitHub</a></li>
+      </ul>
+
+      <div id="volverAlMenu"><a href="./index.html">Volver al menú principal</a></div>
+
+      <div id="tarjetaDeveloper">
+        <h5>Aplicación creada por:</h5>
+        <div id="envioDeveloper"></div>
+      </div>
+    </footer>
+  </body>
+  <script src="./scripts/indexInfoAutor.js"></script>
+</html>

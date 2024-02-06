@@ -127,3 +127,39 @@ const crearCarta = (actividad) => {
 };
 const formulario = document.querySelector(".form");
 formulario.addEventListener("submit", callBack);
+
+
+
+const botonCreador = document.getElementById("botonCreador");
+const nombreElemento = document.createElement("h6");
+const divDeveloper = document.getElementById("envioDeveloper");
+
+// Establecer estilos iniciales
+nombreElemento.style.margin = "8px";
+nombreElemento.style.padding = "4px";
+nombreElemento.style.textAlign = "center";
+nombreElemento.style.backgroundColor = "firebrick";
+nombreElemento.style.borderRadius = "25px";
+nombreElemento.style.color = "whitesmoke";
+nombreElemento.style.border = "2px solid whitesmoke";
+
+botonCreador.addEventListener("click", function (e) {
+  e.preventDefault();
+  renderDev();
+});
+
+function renderDev() {
+  const nombreCreador = document.getElementById("inputCreador");
+  const nombre = nombreCreador.value;
+
+  // Asignar el nombre
+  nombreElemento.textContent = nombre;
+
+  // Limpiar el nombreCreador
+  nombreCreador.value = "";
+
+  // Agregar el elemento al divDeveloper
+  divDeveloper.innerHTML = "";
+  divDeveloper.appendChild(nombreElemento);
+}
+

@@ -1,0 +1,299 @@
+body {
+    background: #343541;
+    color: #d1d5d8;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  
+  h3 {
+    padding: 12px;
+    text-align: center;
+    background-color: firebrick;
+    border-radius: 25px;
+    color: whitesmoke;
+  }
+  
+  h4 {
+    padding: 8px;
+    text-align: center;
+    background-color: firebrick;
+    border-radius: 25px;
+    color: whitesmoke;
+  }
+  
+  #name {
+    background-color: firebrick;
+    border-radius: 10px;
+    border-style: solid;
+    text-align: center;
+    margin: 8px;
+    padding: 8px;
+  }
+  
+  #name:hover {
+    transition: 2s;
+    background-color: black;
+  }
+  
+  #profession {
+    text-align: center;
+  }
+  
+  main,
+  .secundario {
+    display: flex;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 10px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  
+  .card {
+    color: black;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .welcome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+  }
+  .welcome:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    transition: 1.5s;
+    cursor: pointer;
+  }
+  .personal,
+  .tecnoFav,
+  .hobbies {
+    padding: 8px;
+    margin-bottom: 1rem;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .personal:hover,
+  .tecnoFav:hover,
+  .hobbies:hover {
+    transition: 4s;
+    border: 1px solid whitesmoke;
+    border-radius: 25px;
+    padding-left: 4px;
+    background-color: #343541;
+    max-height: 500px;
+  }
+  
+  .personal:hover .title,
+  .tecnoFav:hover .title,
+  .hobbies:hover .title {
+    transition: 2s;
+    border-radius: 10px;
+    background: firebrick;
+    color: whitesmoke;
+    border-style: solid;
+    margin: 12px;
+    padding: 4px;
+    cursor: pointer;
+  }
+  
+  .personal .description,
+  .hobbies .description {
+    display: flex;
+    height: 0;
+    color: whitesmoke;
+    font-size: 0;
+    opacity: 0;
+  }
+  
+  .personal:hover .description,
+  .hobbies:hover .description {
+    transition: 5s;
+    border-radius: 10px;
+    font-size: medium;
+    color: whitesmoke;
+    border-style: solid;
+    margin: 8px;
+    padding: 8px;
+    border: 4px;
+    cursor: pointer;
+    opacity: 1;
+    height: auto;
+    border: white solid;
+  }
+  
+  .personal:not(:hover) .title,
+  .tecnoFav:not(:hover) .title,
+  .hobbies:not(:hover) .title {
+    transition: 2s;
+  }
+  
+  .tecnoFav .imagenes {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    cursor: pointer;
+    border: whitesmoke solid;
+    border-radius: 25px;
+    padding: 8px;
+  }
+  .tecnoFav .imagenes img {
+    height: 0;
+    width: 0;
+    opacity: 0.2;
+  }
+  .tecnoFav .imagenes img:hover {
+    opacity: 1;
+  }
+  
+  .tecnoFav:hover .imagenes:hover img {
+    height: 60px;
+    width: 60px;
+    transition: 1s;
+    cursor: pointer;
+    border-radius: 25px;
+  }
+  .hobbies .description {
+    opacity: 0;
+    height: 0;
+  }
+  
+  .hobbies:hover .description {
+    opacity: 1;
+    height: auto;
+  }
+  
+  .hobbies p {
+    padding: 1rem;
+  }
+  
+  .form {
+    border: white solid;
+    border-radius: 25px;
+    padding: 12px;
+    background-color: firebrick;
+  }
+  
+  .form input {
+    background-color: whitesmoke;
+    border-radius: 25px;
+    display: flex;
+    margin: 4px;
+  }
+  
+  #envioActividad {
+    /* background-color: red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    /* align-content: center; */
+  }
+  
+  #envioActividad:hover div:hover {
+    opacity: 1;
+    transition: 2s;
+    cursor: pointer;
+  }
+  
+  #envioActividad div {
+    opacity: 0.5;
+    padding: 8px;
+    background-color: #343541;
+    width: 240px;
+    margin: 8px;
+    border-radius: 25px;
+    border: whitesmoke solid;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+  }
+  
+  #envioActividad * h4 {
+    margin: 8px;
+    width: -webkit-fill-available;
+    border: #d1d5d8 solid 3px;
+    border-radius: 25px;
+  }
+  
+  #envioActividad img {
+    width: 200px;
+    padding: 8px;
+    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+    border: #d1d5d8 solid 2px;
+    border-radius: 25px;
+  }
+  
+  #envioActividad div p {
+    justify-content: center;
+    align-items: center;
+    margin: 8px;
+    padding: inherit;
+  }
+  
+  #divCreador {
+    margin: 8px;
+    background-color: firebrick;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    border: whitesmoke solid 2px;
+    margin: 12px;
+  }
+  
+  #divCreador * {
+    margin: 4px;
+    border-radius: 2px;
+  }
+  
+  footer {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  footer ul {
+    list-style-type: none;
+    padding: 1rem;
+  }
+  
+  footer li {
+    display: inline;
+    margin: 0 12px;
+  }
+  
+  footer a {
+    color: whitesmoke;
+    text-decoration: none;
+  }
+
+  #volverAlMenu{
+    background-color: firebrick;
+    padding: 8px;
+    margin-bottom: 12px;
+    border-radius: 25px;
+    border: #d1d5d8 solid 2px;
+    text-align: center;
+    display: inline-flex;
+
+  }
+  
