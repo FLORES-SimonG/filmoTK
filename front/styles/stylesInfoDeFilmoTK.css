@@ -36,6 +36,26 @@ header:hover {
   border-radius: 40px;
   margin: 4px;
 }
+h2 {
+  margin: 8px;
+  background-color: firebrick;
+  padding: 8px;
+  border-radius: 25px;
+  text-align: center;
+  display: flex;
+  border: firebrick solid 2px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  /* align-content: center; */
+  align-items: center;
+  cursor: pointer;
+}
+
+h2:hover {
+  box-shadow: 4px 4px 5px 0px black;
+  transition: 1s;
+}
 
 nav {
   background-color: firebrick;
@@ -56,6 +76,11 @@ nav {
 
   ul {
     display: flex;
+    a {
+      color: black;
+      cursor: pointer;
+      text-decoration: none;
+    }
     li {
       background-color: whitesmoke;
       color: black;
@@ -63,9 +88,13 @@ nav {
       display: inline-flex;
       cursor: pointer;
       align-items: center;
-      padding: 4px;
+      padding: 8px;
       border: black solid 2px;
       border-radius: 25px;
+    }
+    li:hover {
+      box-shadow: 2px 2px 2px 0px black;
+      transition: 1s;
     }
   }
 }
@@ -99,7 +128,6 @@ main {
         /* border: black solid 2px; */
       }
     }
-    
   }
 
   .tarjetas {
@@ -114,47 +142,26 @@ main {
     justify-content: space-between;
     align-items: stretch;
 
-    .title {
-      margin: 8px;
-      background-color: firebrick;
-      padding: 8px;
-      border-radius: 25px;
-      text-align: center;
-      display: flex;
-      border: firebrick solid 2px;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      justify-content: center;
-      /* align-content: center; */
-      align-items: center;
-    }
-
     .description {
       display: flex;
       flex-direction: row;
       align-content: center;
       justify-content: center;
       align-items: center;
-  }
+    }
 
-    #parrafo{
+    #parrafo {
       margin: 40px;
     }
 
-    img{
+    img {
       margin: 25px;
       border-radius: 25px;
       border: black solid 2px;
       height: 250px;
     }
-  
-
   }
-
 }
-
-
-
 
 footer {
   margin-top: 1rem;
@@ -168,29 +175,27 @@ footer {
     align-content: center;
     justify-content: center;
     align-items: center;
-    padding: 4px;
+    padding: 6px;
     border-radius: 25px;
-}
+  }
 }
 
 footer ul {
   list-style-type: none;
   padding: 1rem;
- 
 }
 
 footer li {
   display: inline;
   margin: 0 12px;
- 
 }
 
 footer li a {
-  color:#343541;
+  color: #343541;
   text-decoration: none;
 }
 
-#volverAlMenu{
+#volverAlMenu {
   background-color: firebrick;
   padding: 8px;
   margin-bottom: 12px;
@@ -198,5 +203,7 @@ footer li a {
   border: #d1d5d8 solid 2px;
   text-align: center;
   display: inline-flex;
-
+  a {
+    color: #d1d5d8;
+  }
 }

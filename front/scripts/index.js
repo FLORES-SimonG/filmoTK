@@ -87,7 +87,7 @@ const crearCarta = (actividad) => {
 
   const lista = document.createElement("div");
 
-  let tituloRender = document.createElement("h4");
+  let tituloRender = document.createElement("h3");
   tituloRender.textContent = title;
 
   let imagenRender = document.createElement("img");
@@ -128,8 +128,6 @@ const crearCarta = (actividad) => {
 const formulario = document.querySelector(".form");
 formulario.addEventListener("submit", callBack);
 
-
-
 const botonCreador = document.getElementById("botonCreador");
 const nombreElemento = document.createElement("h6");
 const divDeveloper = document.getElementById("envioDeveloper");
@@ -163,3 +161,17 @@ function renderDev() {
   divDeveloper.appendChild(nombreElemento);
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  filmsDisponibles();
+});
+
+function filmsDisponibles() {
+  tempData
+    .map((movie) => {
+      return new Activity(movie);
+    })
+    .forEach((activity) => {
+      repositorio.createActivity(activity);
+    });
+  mostrarCartas();
+}

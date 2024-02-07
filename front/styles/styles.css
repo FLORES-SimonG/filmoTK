@@ -37,6 +37,27 @@ header:hover {
   margin: 4px;
 }
 
+h2 {
+  margin: 8px;
+  background-color: firebrick;
+  padding: 8px;
+  border-radius: 25px;
+  text-align: center;
+  display: flex;
+  border: firebrick solid 2px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  /* align-content: center; */
+  align-items: center;
+  cursor: pointer;
+}
+
+h2:hover {
+  box-shadow: 4px 4px 5px 0px black;
+  transition: 1s;
+}
+
 nav {
   background-color: firebrick;
   display: flex;
@@ -56,6 +77,12 @@ nav {
 
   ul {
     display: flex;
+    a {
+      color: black;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
     li {
       background-color: whitesmoke;
       color: black;
@@ -63,9 +90,13 @@ nav {
       display: inline-flex;
       cursor: pointer;
       align-items: center;
-      padding: 4px;
+      padding: 8px;
       border: black solid 2px;
       border-radius: 25px;
+    }
+    li:hover {
+      box-shadow: 2px 2px 2px 0px black;
+      transition: 1s;
     }
   }
 }
@@ -89,17 +120,27 @@ main {
       flex-direction: row;
       flex-wrap: nowrap;
       align-content: center;
-      justify-content: center;
+      justify-content: space-evenly;
       align-items: center;
+      gap: 4px;
+      a {
+        color: whitesmoke;
+        cursor: pointer;
+        text-decoration: none;
+      }
       li {
         margin: 8px;
         background-color: firebrick;
         padding: 8px;
         border-radius: 25px;
-        /* border: black solid 2px; */
+        margin: 8px;
+        border: firebrick solid 2px;
+      }
+      li:hover {
+        box-shadow: 2px 2px 2px 0px black;
+        transition: 1s;
       }
     }
-    
   }
 
   .tarjetas {
@@ -114,27 +155,11 @@ main {
     justify-content: space-between;
     align-items: stretch;
 
-    .title {
-      margin: 8px;
-      background-color: firebrick;
-      padding: 8px;
-      border-radius: 25px;
-      text-align: center;
-      display: flex;
-      border: firebrick solid 2px;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      justify-content: center;
-      /* align-content: center; */
-      align-items: center;
-    }
-
-    #parrafo{
+    #parrafo {
       margin: 40px;
     }
-  
 
-    .form{
+    .form {
       padding: 12px;
       margin: 8px;
       background-color: firebrick;
@@ -145,12 +170,12 @@ main {
       align-content: center;
       justify-content: center;
       align-items: stretch;
-      input{
+      input {
         margin: 4px;
         padding: 4px;
-        border-radius: 8px;  
+        border-radius: 8px;
       }
-      button{
+      button {
         display: flex;
         text-align: center;
         flex-direction: column;
@@ -159,27 +184,22 @@ main {
         border-radius: 25px;
         margin-top: 8px;
         cursor: pointer;
-
       }
     }
   }
-
 }
 
 #contenedorDeTarjetas {
   display: flex;
   background-color: whitesmoke;
-  border-radius: 10px;
+  border-radius: 25px;
   padding: 1rem;
   margin-top: 10px;
+  margin: 8px;
+  border: black solid 2px;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  /* display: flex; */
-  /* flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start; */
-  /* flex-direction: row; */
 
   #envioFilm img {
     height: 100px;
@@ -195,12 +215,6 @@ main {
   align-items: flex-start;
   flex-direction: row;
   /* align-content: center; */
-}
-
-#envioFilm:hover div:hover {
-  opacity: 1;
-  transition: 2s;
-  cursor: pointer;
 }
 
 #envioFilm div {
@@ -220,10 +234,18 @@ main {
   transition: opacity 0.5s;
 }
 
-#envioFilm * h4 {
+#envioFilm:hover div:hover {
+  opacity: 1;
+  transition: 2s;
+  cursor: pointer;
+}
+
+#envioFilm * h3 {
   margin: 8px;
+  padding: 8px;
   width: -webkit-fill-available;
   border: #d1d5d8 solid 3px;
+  background-color: firebrick;
   border-radius: 25px;
 }
 
@@ -240,8 +262,15 @@ main {
 #envioFilm div p {
   justify-content: center;
   align-items: center;
-  margin: 8px;
+  margin: 4px;
   padding: inherit;
+}
+
+#envioFilm div p:last-child {
+  background-color: firebrick;
+  border-radius: 25px;
+  padding: 8px;
+  border: #d1d5d8 solid 2px;
 }
 
 /*!HASTA ACÁ. HAY QUE ACOMODAR*/
