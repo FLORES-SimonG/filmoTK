@@ -161,10 +161,14 @@ function renderDev() {
   divDeveloper.appendChild(nombreElemento);
 }
 
+//! Cuando estoy por abrir la WEB, se me carga automáticamente con DOMContentLoaded y derivo una función que la llamaré "filmsDisponibles".
+
 document.addEventListener("DOMContentLoaded", function () {
   filmsDisponibles();
 });
-
+//! Acá desarrollo mi función diciendo: Mapeame lo que tengo en tempData y retornamelo como una nueva actividad, cuyo nombre
+//! de cada film, se llamará "MOVIE", posteriormente a esto, por cada elemento a tempData, usaré el createActivity de mi repositorio,
+//! donde finalmente, hago mostrar las cartas con la función que declaré en la linea 74.
 function filmsDisponibles() {
   tempData
     .map((movie) => {
