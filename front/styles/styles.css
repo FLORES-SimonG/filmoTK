@@ -21,6 +21,7 @@ header:hover {
   color: whitesmoke;
   cursor: pointer;
   opacity: 0.8;
+  transition: 1s;
 }
 
 #logoContenedor {
@@ -247,6 +248,7 @@ main {
   border: #d1d5d8 solid 3px;
   background-color: firebrick;
   border-radius: 25px;
+  text-align: center;
 }
 
 #envioFilm img {
@@ -260,10 +262,16 @@ main {
 }
 
 #envioFilm div p {
+  text-align: center;
   justify-content: center;
   align-items: center;
-  margin: 4px;
+  margin: 8px;
   padding: inherit;
+  background-color: whitesmoke;
+  color: black;
+  border: #d1d5d8 solid 2px;
+  border-radius: 25px;
+
 }
 
 #envioFilm div p:last-child {

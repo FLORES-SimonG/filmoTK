@@ -95,19 +95,19 @@ const crearCarta = (actividad) => {
   imagenRender.setAttribute("alt", "Imagen");
 
   let directorRander = document.createElement("p");
-  directorRander.textContent = director;
+  directorRander.textContent = `Director: ${director}`;
 
   let yearRender = document.createElement("p");
-  yearRender.textContent = year;
+  yearRender.textContent = `Año: ${year}`;
 
   let durationRander = document.createElement("p");
-  durationRander.textContent = duration;
+  durationRander.textContent = `Duración: ${duration}`;
 
   let genreRander = document.createElement("p");
-  genreRander.textContent = genre;
+  genreRander.textContent = `Género: ${genre}`;
 
   let rateRander = document.createElement("p");
-  rateRander.textContent = rate;
+  rateRander.textContent = `${rate}`;
 
   lista.appendChild(tituloRender);
   lista.appendChild(imagenRender);
@@ -166,16 +166,29 @@ function renderDev() {
 document.addEventListener("DOMContentLoaded", function () {
   filmsDisponibles();
 });
-//! Acá desarrollo mi función diciendo: Mapeame lo que tengo en tempData y retornamelo como una nueva actividad, cuyo nombre
-//! de cada film, se llamará "MOVIE", posteriormente a esto, por cada elemento a tempData, usaré el createActivity de mi repositorio,
-//! donde finalmente, hago mostrar las cartas con la función que declaré en la linea 74.
-function filmsDisponibles() {
-  tempData
-    .map((movie) => {
-      return new Activity(movie);
-    })
-    .forEach((activity) => {
-      repositorio.createActivity(activity);
-    });
+
+
+
+const filmsDisponibles = ()=> {
+  //! Acá desarrollo mi función diciendo: Mapeame lo que tengo en tempData y retornamelo como una nueva actividad, cuyo nombre
+  //! de cada film, se llamará "MOVIE", posteriormente a esto, por cada elemento a tempData, usaré el createActivity de mi repositorio,
+  //! donde finalmente, hago mostrar las cartas con la función que declaré en la linea 74.  
+  // tempData
+  //   .map((movie) => {
+  //     return new Activity(movie);
+  //   })
+  //   .forEach((activity) => {
+  //     repositorio.createActivity(activity);
+  //   });
+
+  $.get('https://students-api.2.us-1.fl0.io/movies', (peliculas)=> {
+  peliculas.forEach((pelicula)=> {
+    repositorio.createActivity(pelicula);
+  });
   mostrarCartas();
+});
+
+
+
+  // mostrarCartas();
 }
