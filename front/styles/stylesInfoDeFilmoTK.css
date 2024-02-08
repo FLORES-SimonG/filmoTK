@@ -178,6 +178,9 @@ footer {
     padding: 6px;
     border-radius: 25px;
   }
+  div {
+    margin: 8px;
+  }
 }
 
 footer ul {

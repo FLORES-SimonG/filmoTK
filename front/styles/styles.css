@@ -202,6 +202,11 @@ main {
   flex-wrap: nowrap;
   justify-content: center;
 
+  .title p {
+    text-align: center;
+    color: black;
+}
+
   #envioFilm img {
     height: 100px;
   }
@@ -293,7 +298,9 @@ main {
   border: whitesmoke solid 2px;
   margin: 12px;
 }
-
+#botonCreador{
+  cursor: pointer;
+}
 #divCreador * {
   margin: 4px;
   border-radius: 2px;
