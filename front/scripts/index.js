@@ -1,33 +1,5 @@
-class Activity {
-  constructor({ id, title, year, director, duration, genre, rate, poster }) {
-    this.id = id;
-    this.title = title;
-    this.year = year;
-    this.director = director;
-    this.duration = duration;
-    this.genre = genre;
-    this.rate = rate;
-    this.poster = poster;
-  }
-}
+const Repository = require('../models/Repository');
 
-class Repository {
-  constructor() {
-    this.activities = [];
-  }
-  getAllActivities() {
-    return this.activities;
-  }
-
-  createActivity(object) {
-    const activity = new Activity(object);
-    this.activities.push(activity);
-  }
-
-  deleteActivity(id) {
-    this.activities = this.activities.filter((x) => x.id !== id);
-  }
-}
 
 const repositorio = new Repository();
 
