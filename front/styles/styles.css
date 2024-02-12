@@ -208,7 +208,9 @@ main {
 }
 
   #envioFilm img {
-    height: 100px;
+    height: 180px;
+    object-fit: scale-down;
+    
   }
 }
 
