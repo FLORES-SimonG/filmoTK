@@ -31,15 +31,17 @@ class CarritoCompra {
 
 
 class Articulo {
-  constructor({ title, precio, descuento}) {
+  constructor({ title, precio}) {
     
     this.title = title;
     this.precio = precio;
-    this.descuento = descuento;
+    
   }
 }
 
 const carritoDeCompras = new CarritoCompra;
+
+module.exports = {carritoDeCompras};
 
 // let prueba = {
 //     title: 'perro',
