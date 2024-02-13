@@ -1,6 +1,4 @@
-const Repository = require('../models/Repository');
-
-
+const Repository = require("../models/Repository");
 
 const repositorio = new Repository();
 
@@ -140,12 +138,10 @@ document.addEventListener("DOMContentLoaded", function () {
   filmsDisponibles();
 });
 
-
-
-const filmsDisponibles = ()=> {
+const filmsDisponibles = () => {
   //! Acá desarrollo mi función diciendo: Mapeame lo que tengo en tempData y retornamelo como una nueva actividad, cuyo nombre
   //! de cada film, se llamará "MOVIE", posteriormente a esto, por cada elemento a tempData, usaré el createActivity de mi repositorio,
-  //! donde finalmente, hago mostrar las cartas con la función que declaré en la linea 74.  
+  //! donde finalmente, hago mostrar las cartas con la función que declaré en la linea 74.
   // tempData
   //   .map((movie) => {
   //     return new Activity(movie);
@@ -154,14 +150,12 @@ const filmsDisponibles = ()=> {
   //     repositorio.createActivity(activity);
   //   });
 
-  $.get('https://students-api.2.us-1.fl0.io/movies', (peliculas)=> {
-  peliculas.forEach((pelicula)=> {
-    repositorio.createActivity(pelicula);
+  $.get("https://students-api.2.us-1.fl0.io/movies", (peliculas) => {
+    peliculas.forEach((pelicula) => {
+      repositorio.createActivity(pelicula);
+    });
+    mostrarCartas();
   });
-  mostrarCartas();
-});
-
-
 
   // mostrarCartas();
-}
+};
