@@ -23,6 +23,9 @@ class CarritoCompra {
 
   aplicarDescuento(porcentaje=0) {
     let valorConDescuento=0;
+    if(porcentaje>100){
+      return "El descuento debe ser entre 0% y 100%";
+    }
     valorConDescuento= this.calcularTotal()*(1-(Math.abs(porcentaje)/100));   
     return valorConDescuento ;
   }
@@ -39,9 +42,9 @@ class Articulo {
   }
 }
 
-const carritoDeCompras = new CarritoCompra;
+const carritoDeCompras = new CarritoCompra();
 
-module.exports = {carritoDeCompras};
+module.exports = CarritoCompra;
 
 // let prueba = {
 //     title: 'perro',
