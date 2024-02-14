@@ -1,8 +1,10 @@
 const Repository = require("../models/Repository");
+const URL = "https://students-api.2.us-1.fl0.io/movies";
+const axios = require('axios');
 
 const repositorio = new Repository();
 
-const callBack = (e) => {
+const callBack = (e) => {  
   e.preventDefault();
   const titulo = formulario.querySelector(".nombreJS");
   // const comentario = formulario.querySelector(".descripcionJS");
@@ -142,20 +144,21 @@ const filmsDisponibles = () => {
   //! Acá desarrollo mi función diciendo: Mapeame lo que tengo en tempData y retornamelo como una nueva actividad, cuyo nombre
   //! de cada film, se llamará "MOVIE", posteriormente a esto, por cada elemento a tempData, usaré el createActivity de mi repositorio,
   //! donde finalmente, hago mostrar las cartas con la función que declaré en la linea 74.
-  // tempData
-  //   .map((movie) => {
-  //     return new Activity(movie);
-  //   })
-  //   .forEach((activity) => {
-  //     repositorio.createActivity(activity);
-  //   });
+ 
 
-  $.get("https://students-api.2.us-1.fl0.io/movies", (peliculas) => {
-    peliculas.forEach((pelicula) => {
-      repositorio.createActivity(pelicula);
+  axios.get(URL)
+  .then(response => {
+    response.data.map(movie => {
+      repositorio.createActivity(movie);
+      return movie; // `map` espera que devuelvas un valor, aunque aquí no lo uses.
     });
     mostrarCartas();
-  });
+  })
+  .catch(error => alert("Error actualizado AMIGO MÍO: " + error.message));
 
-  // mostrarCartas();
+ 
+
 };
+
+console.log('ESTO SE FUE AL CARAJO');
+// filmsDisponibles();
