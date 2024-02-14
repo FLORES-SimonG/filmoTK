@@ -1,10 +1,10 @@
 const Repository = require("../models/Repository");
 const URL = "https://students-api.2.us-1.fl0.io/movies";
-const axios = require('axios');
+const axios = require("axios");
 
 const repositorio = new Repository();
 
-const callBack = (e) => {  
+const callBack = (e) => {
   e.preventDefault();
   const titulo = formulario.querySelector(".nombreJS");
   // const comentario = formulario.querySelector(".descripcionJS");
@@ -140,25 +140,41 @@ document.addEventListener("DOMContentLoaded", function () {
   filmsDisponibles();
 });
 
-const filmsDisponibles = () => {
+// //?OPCIÓN 1: USANDO .THEN .CATCH CON AXIOS
+// const filmsDisponibles = () => {
+//   //! Acá desarrollo mi función diciendo: Mapeame lo que tengo en tempData y retornamelo como una nueva actividad, cuyo nombre
+//   //! de cada film, se llamará "MOVIE", posteriormente a esto, por cada elemento a tempData, usaré el createActivity de mi repositorio,
+//   //! donde finalmente, hago mostrar las cartas con la función que declaré en la linea 74.
+
+//   axios.get(URL)
+//   .then(response => {
+//     response.data.map(movie => {
+//       repositorio.createActivity(movie);
+//       return movie; // `map` espera que devuelvas un valor, aunque aquí no lo uses.
+//     });
+//     mostrarCartas();
+//   })
+//   .catch(error => alert("Error actualizado AMIGO MÍO: " + error.message));
+
+// };
+
+//?OPCIÓN 2: USANDO Async:
+
+const filmsDisponibles = async () => {
   //! Acá desarrollo mi función diciendo: Mapeame lo que tengo en tempData y retornamelo como una nueva actividad, cuyo nombre
   //! de cada film, se llamará "MOVIE", posteriormente a esto, por cada elemento a tempData, usaré el createActivity de mi repositorio,
   //! donde finalmente, hago mostrar las cartas con la función que declaré en la linea 74.
- 
-
-  axios.get(URL)
-  .then(response => {
-    response.data.map(movie => {
+  try {
+    const response = await axios.get(URL);
+    response.data.map((movie) => {
       repositorio.createActivity(movie);
       return movie; // `map` espera que devuelvas un valor, aunque aquí no lo uses.
     });
     mostrarCartas();
-  })
-  .catch(error => alert("Error actualizado AMIGO MÍO: " + error.message));
-
- 
-
+  } catch (error) {
+    (error) => alert("Error actualizado AMIGO MÍO: " + error.message);
+  }
 };
 
-console.log('ESTO SE FUE AL CARAJO');
+console.log("ESTO SE FUE AL CARAJO");
 // filmsDisponibles();
