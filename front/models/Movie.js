@@ -1,4 +1,4 @@
-class Activity {
+class Movie {
   constructor({ id, title, year, director, duration, genre, rate, poster }) {
     this.id = id;
     this.title = title;
@@ -11,4 +11,4 @@ class Activity {
   }
 }
 
-module.exports = Activity;
+module.exports = Movie;

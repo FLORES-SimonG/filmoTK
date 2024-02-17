@@ -1,9 +1,9 @@
-const Repository = require("../models/Repository");
+const MovieRepository = require("../models/MovieRepository");
 const URL = "http://localhost:3000/movies";
 // const URL = 'https://henry-movies-dev-sgtm.3.us-1.fl0.io/';
 const axios = require("axios");
 
-const repositorio = new Repository();
+const repositorio = new MovieRepository();
 
 const callBack = (e) => {
   e.preventDefault();
@@ -39,7 +39,7 @@ const callBack = (e) => {
   ) {
     alert("COMPLETA LOS DATOS");
   } else {
-    repositorio.createActivity(obj);
+    repositorio.createMovie(obj);
     mostrarCartas();
     formulario.reset();
   }
@@ -48,8 +48,8 @@ const callBack = (e) => {
 const mostrarCartas = () => {
   const carta = document.getElementById("envioFilm");
   carta.innerHTML = "";
-  const actividadesParciales = repositorio.getAllActivities();
-  const conjuntoTarjetas = actividadesParciales.map((actividad) => {
+  const moviesParciales = repositorio.getAllMovies();
+  const conjuntoTarjetas = moviesParciales.map((actividad) => {
     return crearCarta(actividad);
   });
   conjuntoTarjetas.forEach((tarjeta) => carta.appendChild(tarjeta));
@@ -94,7 +94,7 @@ const crearCarta = (actividad) => {
   lista.addEventListener("click", () => {
     lista.remove();
 
-    repositorio.deleteActivity(id);
+    repositorio.deleteMovie(id);
   });
 
   return lista;
@@ -168,7 +168,7 @@ const filmsDisponibles = async () => {
   try {
     const response = await axios.get(URL);
     response.data.map((movie) => {
-      repositorio.createActivity(movie);
+      repositorio.createMovie(movie);
       return movie; // `map` espera que devuelvas un valor, aunque aquí no lo uses.
     });
     mostrarCartas();
