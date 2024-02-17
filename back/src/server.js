@@ -4,7 +4,7 @@ const homeRouter = require('./routes/homeRouter');
 const morgan =require('morgan');
 const cors= require('cors');
 
-const app = express();
+const app = express(); //!Nombre que le voy a poner Express() para mayor comodidad.
 
 //!MIDDLEWARE -------
 app.use(morgan('dev'));
@@ -27,4 +27,4 @@ app.use('/movies',movieRouter);
 
 app.get('/demo', (req,res)=>res.send('DEMO'))
 
-module.exports = app;   
+module.exports = app;   //!LO EXPORTO AL INDEX.JS DE BACK
