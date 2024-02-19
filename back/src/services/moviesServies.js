@@ -1,17 +1,17 @@
-const axios = require("axios");
+// const axios = require("axios");
 
-const servicioFilm = {
-  getFilm: async () => {
+const Movie=require("../models/Movie.js");
+
+
+
+const servicioFilm = { getMovies: async () =>{
     try {
-      const { data } = await axios.get("https://henry-movies-dev-sgtm.3.us-1.fl0.io/");
-      return data;
-
-    } 
-    
-    catch (error) {
-      alert("Error actualizado AMIGO MÍO: " + error.message);
+      const movies = await Movie.find();
+      return movies;
+    } catch (error) {
+      return error;
     }
-  },
+  }
 };
 
 module.exports = servicioFilm;

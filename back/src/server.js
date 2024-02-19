@@ -14,10 +14,10 @@ app.use(express.json());
 
 //? SI QUIERO HACER UNO PROPIO MIDDLEWARE:
 
-app.use((req,res,next)=>{
-    console.log('Este es mi propio Middleware');
-    next();
-})
+// app.use((req,res,next)=>{
+//     console.log('Este es mi propio Middleware');
+//     next();
+// })
 
 
 //!derivaciones
