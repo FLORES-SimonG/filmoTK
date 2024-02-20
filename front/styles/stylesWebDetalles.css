@@ -30,7 +30,12 @@ header:hover {
   background-color: black;
   margin: 2px;
 }
-
+#finalidad {
+  list-style-type: circle;
+  li {
+    margin: 8px;
+  }
+}
 #logo {
   width: 40px;
   border-radius: 40px;
@@ -152,7 +157,6 @@ main {
 
     #parrafo {
       margin: 40px;
-      padding: 4px;
       line-height: normal;
     }
 

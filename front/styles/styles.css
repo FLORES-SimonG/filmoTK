@@ -158,6 +158,8 @@ main {
 
     #parrafo {
       margin: 40px;
+      line-height: normal;
+      
     }
 
     .form {
