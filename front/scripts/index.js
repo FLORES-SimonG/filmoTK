@@ -106,6 +106,12 @@ const botonCreador = document.getElementById("botonCreador");
 const nombreElemento = document.createElement("h6");
 const divDeveloper = document.getElementById("envioDeveloper");
 
+const botonReset = document.getElementById("buttonReset");
+
+botonReset.addEventListener("click", function (e) {
+  formulario.reset();
+});
+
 // Establecer estilos iniciales
 nombreElemento.style.margin = "8px";
 nombreElemento.style.padding = "4px";
@@ -177,5 +183,5 @@ const filmsDisponibles = async () => {
   }
 };
 
-console.log("ESTO SE FUE AL CARAJO");
+console.log("Hola mundo amigo!");
 // filmsDisponibles();

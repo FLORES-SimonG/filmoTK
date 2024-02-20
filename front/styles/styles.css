@@ -215,7 +215,12 @@ main {
     
   }
 }
+#reseteoDiv{
+  justify-content: space-around;
+  display: flex;
+  margin: 4px;
 
+}
 /*!ACÁ COPIÉ LO DEL TRABAJO ANTERIOR */
 #envioFilm {
   /* background-color: red; */
