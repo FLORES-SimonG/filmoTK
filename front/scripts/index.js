@@ -106,11 +106,13 @@ const botonCreador = document.getElementById("botonCreador");
 const nombreElemento = document.createElement("h6");
 const divDeveloper = document.getElementById("envioDeveloper");
 
+//! Crear un botón para resetear el formulario ------------------
 const botonReset = document.getElementById("buttonReset");
 
 botonReset.addEventListener("click", function (e) {
   formulario.reset();
 });
+//!----------------------------------------------
 
 // Establecer estilos iniciales
 nombreElemento.style.margin = "8px";
