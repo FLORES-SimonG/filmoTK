@@ -5,7 +5,7 @@ const axios = require("axios");
 
 const repositorio = new MovieRepository();
 
-const callBack = async (e) => {
+const callBack = (e) => {
   e.preventDefault();
   const titulo = formulario.querySelector(".nombreJS");
   // const comentario = formulario.querySelector(".descripcionJS");
@@ -37,24 +37,26 @@ const callBack = async (e) => {
     duracion.value.length == 0 ||
     genero.value.length == 0
   ) {
-    alert("COMPLETA LOS DATOS");
+    return alert("COMPLETA LOS DATOS");
   } else if (puntaje.value < 0 || puntaje.value > 10) {
-    alert("PUNTAJE NO VÁLIDO");
+    return alert("PUNTAJE NO VÁLIDO");
   } else if (año.value < 1900 || año.value > 2024) {
-    alert("AÑO NO VÁLIDO");
+    return alert("AÑO NO VÁLIDO");
   } else {
     repositorio.createMovie(obj);
     mostrarCartas();
     formulario.reset();
   }
 
-try {
-  const response = await axios.post(URL, obj);
-  console.log(`Película creada: ${response.data}`);
-  filmsDisponibles();
-} catch (error) {
-  console.error("Error al crear la película: ", error);
-}
+  const prueba = async () => {
+    try {
+      const response = await axios.post(URL, obj);
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  prueba()
 
 };
 
