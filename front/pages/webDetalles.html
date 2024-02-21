@@ -9,54 +9,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Filmo-TK</title>
   </head>
-  <body>
-    <header>
-      <h1>Filmo-TK</h1>
-    </header>
-    <nav>
-      <div id="logoContenedor">
-        <img
-          id="logo"
-          src="https://t4.ftcdn.net/jpg/03/30/34/83/360_F_330348392_mfeArQyzQdhvu2IIrkv6T7yCmCbYLjHx.jpg"
-          alt="imagen"
-        />
-      </div>
-      <div id="pestañas">
-        <ul>
-          <li><a href="../index.html"><button type="button" class="btn btn-light">Formulario Principal</button></a></li>
-          <li><a href="./webDetalles.html"><button type="button" class="btn btn-light" >Detalles</button></a></li> 
-          <li><a href="./iniciosDeFilmoTK.html"><button type="button" class="btn btn-light">Inicios de Filmo-TK</button></a></li> 
-          <li><a href="./infoAutor.html"><button type="button" class="btn btn-light">Sobre el autor</button></a></li> 
-        </ul>
-      </div>
-    </nav>
-
-    <main >
-      <section class="tarjetas">
-        <!--  -->
-        <div class="title">
-          <h2>Detalles</h2>
+  
+    <body>
+      <header>
+        <h1>Filmo-TK</h1>
+      </header>
+      <nav>
+        <div id="logoContenedor">
+          <img
+            id="logo"
+            src="https://t4.ftcdn.net/jpg/03/30/34/83/360_F_330348392_mfeArQyzQdhvu2IIrkv6T7yCmCbYLjHx.jpg"
+            alt="imagen"
+          />
         </div>
-        <div class="description">
-          <div id="parrafo">
-            <ul id="finalidad">
-              <li>La página web "Filmo-TK", creada por Simón Flores, es una web orientada al ámbito cinematográfico. En la sección "Formulario Principal" de la web, es posible participar en la creación y eliminación de películas.
-              </li>
-              <li>Este proyecto forma parte de los requisitos para rendir el exámen del módulo n°2 de SoyHenry, donde tras la aprobación de éste permite acceder al exámen teórico del módulo. 
-              </li>
-              <li>En términos técnicos, "Filmo-TK" ha sido desarrollada utilizando CSS y Bootstrap para el diseño Front, ofreciendo una experiencia dinámica. Para el backend, se ha empleado por tecnologías como Mongo y Express, sumando también otras extensiones vistas durante el cursado
-              </li>
-              <li>Este proyecto intenta en reflejar las habilidades técnicas adquiridas a lo largo de lo aprendido durante el Bootcamp.</li>
-
+        <div id="pestañas">
+          <ul>
+            <li><a href="../index.html"><button type="button" class="btn btn-light">Introducción</button></a></li> 
+            <li><a href="./webDetalles.html"><button type="button" class="btn btn-light" >Formulario</button></a></li>
+            <li><a href="./iniciosDeFilmoTK.html"><button type="button" class="btn btn-light">Inicios de Filmo-TK</button></a></li> 
+            <li><a href="./infoAutor.html"><button type="button" class="btn btn-light">Sobre el autor</button></a></li> 
+          </ul>
+        </div>
+      </nav>
+  
+      <main>
+        <section id="items">
+          <div>
+            <ul>
+                <a href="https://www.dga.org/awards/annual.aspx"><button type="button" class="btn btn-danger">Directors Guild of America Award</button></a>
+                <a href="https://www.oscars.org/"><button type="button" class="btn btn-danger">The Oscars</button></a>
+                <a href="https://goldenglobes.com/"><button type="button" class="btn btn-danger">GOLDEN GLOBES</button></a>
             </ul>
           </div>
-          <!-- <div>
-            <img src="https://t4.ftcdn.net/jpg/03/30/34/83/360_F_330348392_mfeArQyzQdhvu2IIrkv6T7yCmCbYLjHx.jpg" alt="imagen-logo">
+        </section>
+  
+        <section class="tarjetas">
+          <!-- hobbies -->
+          <div class="title">
+            <h2>Formulario para una nueva Película</h2>
           </div>
-        </div> -->
-      </section>
-
-
+          <div class="description">
+            <div id="parrafo">
+              <p>
+                Para enriquecer nuestra creciente colección de películas en Filmo-TK, te invitamos a compartir tu obra con nuestra comunidad. Este formulario es tu primer paso para introducir una nueva película en nuestra plataforma. Para asegurar una integración exitosa, es esencial que completes cada casilla con la información requerida sobre la película.
+              </p>              
+              <br>
+              <p>
+                Cada detalle cuenta: desde el título y año de lanzamiento hasta la sinopsis y el género. Estos datos no solo nos ayudan a organizar y clasificar tu película adecuadamente, sino que también permiten a los usuarios de Filmo-TK descubrir y apreciar tu contribución en toda su riqueza.
+              </p>
+              <br>
+              <p>
+                Por favor, tómate un momento para revisar y llenar cada campo con cuidado. La precisión y la completitud de tu información garantizarán que tu película sea fácilmente accesible y disfrutable para todos en Filmo-TK. ¡Agradecemos tu dedicación a compartir tu creatividad con nosotros!
+              </p>
+            </div>
+            <div class="infoFilm">
+              <!-- infoHobbies -->
+              <form class="form">
+                <input
+                  type="text"
+                  placeholder="Nombre de la Film"
+                  class="nombreJS"
+                />
+  
+                <input type="url" placeholder="URL de la imagen" class="urlJS" />
+  
+                <input type="number" placeholder="Año" class="añoJS" />
+  
+                <input
+                  type="text"
+                  placeholder="Nombre del Autor"
+                  class="autorJS"
+                />
+  
+                <input
+                  type="time"
+                  placeholder="Duración de la Film"
+                  class="duracionJS"
+                />
+  
+                <input type="text" placeholder="Género" class="generoJS" />
+  
+                <input type="number" placeholder="Puntaje" class="puntajeJS" step="0.1" />
+  
+                <button class="botonJS">Adjuntar</button>
+                
+              </form>
+              <div id="reseteoDiv"><button id="buttonReset" class="btn btn-danger">Limpiar Formulario</button></div>
+            </div>
+          </div>
+        </section>
+  
+        <section id="tarjetasActuales">
+          <article id="contenedorDeTarjetasActuales">
+            <!-- <h2>PELÍCULAS DISPONIBLES</h2> -->
+            <div id="filmActuales"></div>
+          </article>
+        </section>
+      </main>
+  
+      <aside class="tarjetasNuevas">
+        <section class="cardTarjetasNuevas">
+          <article id="contenedorDeTarjetas">
+            <div class="title">
+              <h2>PELICULAS DISPONIBLES</h2>
+              <p>Disfruta las películas disponibles que tenemos aquí!</p>
+              <div id="envioFilm"></div>
+            </div>
+          </article>
+        </section>
+      </aside>
+  
+      <div id="divCreador">
+        <form id="formularioInputCreador">
+          <input
+            type="text"
+            placeholder="Nombre del Developer"
+            id="inputCreador"
+          />
+          <button id="botonCreador">Enviar</button>
+        </form>
+      </div>
+  
       <footer>
         <h4>¡Gracias por visitarme!</h4>
   
@@ -66,10 +139,15 @@
           <li><a href="https://github.com/FLORES-SimonG">GitHub</a></li>
         </ul>
   
-        <div><a href="../index.html"><button type="button" class="btn btn-danger">Volver al Formulario Principal</button></a></div>
-  
-        
+        <div><a href="../index.html"><button type="button" class="btn btn-danger">Volver a la Página Principal</button></a></div>
+        <div id="tarjetaDeveloper">
+          <h5>Aplicación creada por:</h5>
+          <div id="envioDeveloper"></div>
+        </div>
       </footer>
+  
+      <!-- <script src="./scripts/tempData.js"></script> -->
+      <script src="../public/bundle.js"></script>
     </body>
     <script src="./scripts/indexInfoAutor.js"></script>
   </html>
