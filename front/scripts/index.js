@@ -106,11 +106,11 @@ const crearCarta = (actividad) => {
   lista.appendChild(genreRander);
   lista.appendChild(rateRander);
 
-  lista.addEventListener("click", () => {
-    lista.remove();
+  // lista.addEventListener("click", () => {
+  //   lista.remove();
 
-    repositorio.deleteMovie(id);
-  });
+  //   repositorio.deleteMovie(id);
+  // });
 
   return lista;
 };
