@@ -38,6 +38,10 @@ const callBack = (e) => {
     genero.value.length == 0
   ) {
     alert("COMPLETA LOS DATOS");
+  } else if (puntaje.value < 0 || puntaje.value > 10) {
+    alert("PUNTAJE NO VÁLIDO");
+  } else if (año.value < 1900 || año.value > 2024) {
+    alert("AÑO NO VÁLIDO");
   } else {
     repositorio.createMovie(obj);
     mostrarCartas();

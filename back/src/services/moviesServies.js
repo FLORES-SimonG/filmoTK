@@ -4,10 +4,19 @@ const Movie=require("../models/Movie.js");
 
 
 
-const servicioFilm = { getMovies: async () =>{
+const servicioFilm = { 
+  getMovies: async () =>{
     try {
       const movies = await Movie.find();
       return movies;
+    } catch (error) {
+      return error;
+    }
+  },
+  createNewMovie: async (movie) => {
+    try {
+      const newMovie = await Movie.create(movie);
+      return newMovie;
     } catch (error) {
       return error;
     }
