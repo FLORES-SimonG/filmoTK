@@ -5,7 +5,7 @@ const axios = require("axios");
 
 const repositorio = new MovieRepository();
 
-const callBack = (e) => {
+const callBack = async (e) => {
   e.preventDefault();
   const titulo = formulario.querySelector(".nombreJS");
   // const comentario = formulario.querySelector(".descripcionJS");
@@ -47,6 +47,15 @@ const callBack = (e) => {
     mostrarCartas();
     formulario.reset();
   }
+
+try {
+  const response = await axios.post(URL, obj);
+  console.log(`Película creada: ${response.data}`);
+  filmsDisponibles();
+} catch (error) {
+  console.error("Error al crear la película: ", error);
+}
+
 };
 
 const mostrarCartas = () => {
