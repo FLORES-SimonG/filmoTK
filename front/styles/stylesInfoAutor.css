@@ -191,8 +191,77 @@ body {
   .hobbies p {
     padding: 1rem;
   }
+  #divActividadesFavoritas{
+    cursor: pointer;
+    
+  }
+  #hobbiesItems{
+   
+    padding: 8px;
+    margin: 8px;
+    border-radius: 25px;
+    border: whitesmoke solid;
+    background-color: #343541;
   
-  .form {
+    ul{
+      
+      margin: 8px;
+      border-radius: 25px;
+      
+      li {
+        opacity: 0.7;
+        display: flex;
+        margin: 8px;
+        padding: 4px;
+        border-radius: 25px;
+        background-color: firebrick;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+        border: whitesmoke solid;
+    }
+    li:hover{
+      
+      transition: 1s;
+      cursor: pointer;
+      opacity: 1;
+    }
+    }
+  }
+  
+  footer {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  footer ul {
+    list-style-type: none;
+    padding: 1rem;
+  }
+  
+  footer li {
+    display: inline;
+    margin: 0 12px;
+  }
+  
+  footer a {
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  
+  #volverAlMenu{
+    background-color: firebrick;
+    padding: 8px;
+    margin-bottom: 12px;
+    border-radius: 25px;
+    border: #d1d5d8 solid 2px;
+    text-align: center;
+    display: inline-flex;
+    
+  }
+  
+  /* .form {
     border: white solid;
     border-radius: 25px;
     padding: 12px;
@@ -204,16 +273,16 @@ body {
     border-radius: 25px;
     display: flex;
     margin: 4px;
-  }
+  } */
   
-  #envioActividad {
-    /* background-color: red; */
+  /* #envioActividad {
+  
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
     flex-direction: row;
-    /* align-content: center; */
+ 
   }
   
   #envioActividad:hover div:hover {
@@ -277,36 +346,4 @@ body {
   #divCreador * {
     margin: 4px;
     border-radius: 2px;
-  }
-  
-  footer {
-    margin-top: 1rem;
-    text-align: center;
-  }
-  
-  footer ul {
-    list-style-type: none;
-    padding: 1rem;
-  }
-  
-  footer li {
-    display: inline;
-    margin: 0 12px;
-  }
-  
-  footer a {
-    color: whitesmoke;
-    text-decoration: none;
-  }
-
-  #volverAlMenu{
-    background-color: firebrick;
-    padding: 8px;
-    margin-bottom: 12px;
-    border-radius: 25px;
-    border: #d1d5d8 solid 2px;
-    text-align: center;
-    display: inline-flex;
-
-  }
-  
+  } */

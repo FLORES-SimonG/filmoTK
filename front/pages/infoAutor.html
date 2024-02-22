@@ -71,12 +71,15 @@
           </div>
           <div class="description">
             <p>
-              Aquí puedo detallar mis actividades favoritas con una breve
-              descripción y puedo colocar una imagen de la misma. Esto se
-              reflejará en el fin de la web. En caso de que no me guste una actividad ya ingresada, 
-              simplemente puedo hacer click para eliminarla.
+              ¿Sabías que dedicar tiempo a tus hobbies no solo es una forma fantástica de romper con la rutina, 
+              sino que también tiene beneficios reales para la salud mental? Ya sea pintar, correr, o sumergirse en libros, 
+              cada actividad que disfrutas hace mucho más que entretenerte. Estudios sugieren que tener un hobby puede reducir el estrés, 
+              mejorar tu capacidad para resolver problemas e incluso proteger tu cerebro de enfermedades como el Alzheimer. 
             </p>
-            <div class="infoHobbies">
+            <p>  Sorprendente, verdad? Y si tienes la curiosidad por saber cuáles son esos pasatiempos que me mantienen con una sonrisa, no dudes en echar un vistazo a la sección "Mis Actividades Favoritas". 
+              Quién sabe, ¡tal vez encuentres una nueva pasión!
+            </p>
+            <!-- <div class="infoHobbies">
               <form class="form">
                 <input
                   type="text"
@@ -95,7 +98,7 @@
                 />
                 <button class="botonJS">Adjuntar</button>
               </form>
-            </div>
+            </div> -->
           </div>
         </article>
       </section>
@@ -104,24 +107,26 @@
     <aside class="secundario">
       <section class="cardHobbies">
         <article>
-          <div class="title">
+          <div id='divActividadesFavoritas' class="title">
             <h4>Mis actividades favoritas</h4>
-            <div id="envioActividad"></div>
+            </div>
+            <div id="hobbiesItems">
+              <ul>
+                <li>Me gusta leer  </li>
+                <li>Me gusta correr</li>
+                <li>Me gusta cocinar</li>
+                <li>Me gusta viajar</li>
+                <li>Y sobretodo, ¡Me gusta aprender!</li>
+            </ul>
           </div>
+            <!-- <div id="envioActividad"> -->
+             
+            <!-- </div> -->
+          
         </article>
       </section>
     </aside>
 
-    <div id="divCreador">
-      <form id="formularioInputCreador">
-        <input
-          type="text"
-          placeholder="Nombre del Developer"
-          id="inputCreador"
-        />
-        <button id="botonCreador">Enviar</button>
-      </form>
-    </div>
 
     <footer>
       <h4>¡Gracias por visitarme!</h4>
@@ -134,10 +139,10 @@
 
       <div><a href="../index.html"><button type="button" class="btn btn-danger">Volver a la Página Principal</button></a></div>
 
-      <div id="tarjetaDeveloper">
+      <!-- <div id="tarjetaDeveloper">
         <h5>Aplicación creada por:</h5>
         <div id="envioDeveloper"></div>
-      </div>
+      </div> -->
     </footer>
   </body>
   <script src="../scripts/infoAutor.js"></script>
