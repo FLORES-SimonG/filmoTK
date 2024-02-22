@@ -22,19 +22,19 @@ function crearCarta(movie) {
   image.alt = "Movie Poster";
 
   const yearElement = document.createElement("p");
-  yearElement.textContent = `Year: ${year}`;
+  yearElement.textContent = `Año: ${year}`;
 
   const directorElement = document.createElement("p");
   directorElement.textContent = `Director: ${director}`;
 
   const durationElement = document.createElement("p");
-  durationElement.textContent = `Duration: ${duration}`;
+  durationElement.textContent = `Duración: ${duration}`;
 
   const genreElement = document.createElement("p");
-  genreElement.textContent = `Genre: ${genre}`;
+  genreElement.textContent = `Género: ${genre}`;
 
   const rateElement = document.createElement("p");
-  rateElement.textContent = `Rating: ${rate}`;
+  rateElement.textContent = `${rate}`;
 
   card.appendChild(titleElement);
   card.appendChild(image);

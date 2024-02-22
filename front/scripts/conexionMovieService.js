@@ -14,9 +14,10 @@ async function crearPelicula(formulario, repositorio, URL) {
   };
 
   if (!validacionDatosPeliculas.validarDatosPelicula(pelicula)) {
-    return alert(
-      "La validación de los datos de la película falló. Vuelva a completar todo nuevamente."
+    alert(
+      "La validación de los datos de la película falló. Vuelva a completar nuevamente."
     );
+    throw new Error("La validación de los datos de la película falló.");
   }
 
   try {
